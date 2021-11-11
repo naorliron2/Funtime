@@ -5,18 +5,17 @@ using System.Linq;
 using System.Reflection;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class AnimationEvents : MonoBehaviour
 {
-    public AnimationClip test_anim;
-    public float timeSelected;
+    [HideInInspector] public AnimationClip[] test_anim;
+    [HideInInspector] public float timeSelected;
     public Animator animator;
+    [HideInInspector] public GameObject m_object;
+    public UnityEvent Event;
     // Update is called once per frame
     void Update()
     {
-
-        //Type[] ChildClasses = Assembly.GetAssembly(typeof(Editor)).GetTypes().Where(myType => myType.IsClass && !myType.IsAbstract && myType.IsSubclassOf(typeof(Editor))));
-
         
     }
 }
